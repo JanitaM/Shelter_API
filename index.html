@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- My Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <title>Shelter Dog API</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="main-nav" class="text-upper">
+    <div class="container">
+      <h2>Charleston Animal Shelter</h2>
+      <ul>
+        <li><a class="current text-upper" href="#">Adopt</a></li>
+        <li><a class="text-upper" href="#">Volunteer</a></li>
+        <li><a class="text-upper" href="#">About</a></li>
+        <li><a class="text-upper" href="#">FAQ's</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero Image Section -->
+  <section id="hero-img-container">
+    <img class="shelter" src="http://media.islandpacket.com/static/news/pitbulls/images/splash_main.jpg"
+      alt="shelter-dog">
+    <img class="rescue"
+      src="https://i.barkpost.com/wp-content/uploads/2015/06/pittie-FT.jpg?q=70&fit=crop&crop=entropy&w=808&h=500"
+      alt="family-dog">
+  </section>
+  <!-- Search Section -->
+  <section id="search-container">
+    <h1 class="text-upper">Charleston Animal Shelter</h1>
+    <p>It's unfortunate but we have over a hundred dogs in need of a good home.</p>
+    <p>Find your good dog here.</p>
+    <form class="form-group">
+      <!-- Breed search -->
+      <input id="breedValue" class="text-upper" type="text" placeholder="Search by breed">
+
+      <button id="breedBtn" class="view-all-btn text-upper">Submit</button>
+
+      <h2 class="text-upper">Or</h2>
+
+      <!-- Random search -->
+      <button id="randomBtn" class="view-all-btn text-upper">View All Dogs</button>
+    </form>
+  </section>
+  <!-- Display Section -->
+  <section id="display-container">
+    <!-- hardcoded for design -->
+    <div id="card-group">
+      <img id="card-img" src="https:\/\/images.dog.ceo\/breeds\/retriever-flatcoated\/n02099267_3605.jpg" alt="">
+      <div id="card-info">
+        <div id="card-left-col">
+          <label for="name">Name:</label>
+          <label for="id">ID:</label>
+          <label for="age">Age:</label>
+          <label for="breed">Breed:</label>
+          <label for="gender">Gender:</label>
+          <label for="spayed-neutered">Spayed/Neutered:</label>
+          <label for="intake-date">Intake Date:</label>
+        </div>
+        <!-- Dummy data to be updated later -->
+        <div id="card-right-col">
+          <label for="name">Ryan</label>
+          <label for="id">123456</label>
+          <label for="age">2</label>
+          <!-- Update this w/ button -->
+          <label for="breed">Mixed</label>
+          <label for="gender">Male</label>
+          <label for="spayed-neutered">Yes</label>
+          <label for="intake-date">1/6/2020</label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="footer" class="text-upper">
+    <div class="container">
+      <p>Charleston Animal Shelter</p>
+      <p>Copyright &copy 2019</p>
+    </div>
+  </footer>
+
+  <!-- JQuery Script -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
