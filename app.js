@@ -3,12 +3,12 @@ let
   images = document.getElementById('card-img'),
   breedBtn = document.getElementById('breedBtn'),
   randomBtn = document.getElementById('randomBtn'),
-  display = document.getElementById('display-container');
+  display = document.getElementById('display-container'),
+  breed = document.getElementById('breedValue');;
 
 // Functions
 const getRequest = e => {
   if (e.target.id === `breedBtn`) {
-    let breed = document.getElementById('breedValue');
     url = `https://dog.ceo/api/breed/${breed.value}/images`;
 
     $.getJSON(url, function (response) {
@@ -24,8 +24,10 @@ const getRequest = e => {
 }
 
 const parseBreedJSON = json => {
-  images.src = json.message[0]; //change this to random
+  let index = Math.floor(Math.random() * json.message.length);
+  images.src = json.message[index];
   display.style.display = 'block';
+  breed.value = "";
 }
 
 const parseRandomJSON = json => {
