@@ -8,6 +8,7 @@
 
   <!-- My Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width: 767px)" href="mobile.css">
   <title>Shelter Dog API</title>
 </head>
 
@@ -35,18 +36,17 @@
   <!-- Search Section -->
   <section id="search-container">
     <h1 class="text-upper">Charleston Animal Shelter</h1>
-    <p>It's unfortunate but we have over a hundred dogs in need of a good home.</p>
+    <div class="container">
+      <p>It's unfortunate but we have over a hundred dogs in need of a good home.</p>
+    </div>
     <p>Find your good dog here.</p>
     <form class="form-group">
       <!-- Breed search -->
-      <input id="breedValue" class="text-upper" type="text" placeholder="Search by breed">
-
-      <button id="breedBtn" class="view-all-btn text-upper">Submit</button>
-
+      <input id="breedValue" class="text-upper" type="text" placeholder="Find a dog by breed">
+      <button id="breedBtn" class="text-upper">Submit</button>
       <h2 class="text-upper">Or</h2>
-
       <!-- Random search -->
-      <button id="randomBtn" class="view-all-btn text-upper">View All Dogs</button>
+      <button id="randomBtn" class="text-upper">Any good dog</button>
     </form>
   </section>
   <!-- Display Section -->
