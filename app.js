@@ -20,6 +20,13 @@ const dogList = [
     age: '2',
     gender: 'Female',
     intake: '1/6/2020'
+  },
+  {
+    name: 'Ginger',
+    id: '1233',
+    age: '7',
+    gender: 'Female',
+    intake: '7/6/2019'
   }
 ];
 
@@ -39,11 +46,13 @@ const getRequest = e => {
   if (e.target.id === `breedBtn`) {
     url = `https://dog.ceo/api/breed/${breed.value}/images`;
     $.getJSON(url, function (response) {
-      return parseBreedJSON(response);
+      parseBreedJSON(response);
+      populateData();
     });
   } else if (e.target.id === `randomBtn`) {
     $.getJSON(`https://dog.ceo/api/breeds/image/random`, function (response) {
-      return parseRandomJSON(response);
+      parseRandomJSON(response);
+      populateData();
     });
   }
 
@@ -56,18 +65,22 @@ const parseBreedJSON = json => {
   images.src = json.message[randomIndex];
   display.style.display = 'block';
   breed.value = "";
-  populateData();
 }
 
 // Random Breed Request
 const parseRandomJSON = json => {
   images.src = json.message;
   display.style.display = 'block';
-  populateData();
 }
 
 // Add Dog Data
-const populateData = (e) => {
+const populateData = () => {
+  // Clear existing data first
+  if (leftCol.firstChild && rightCol) {
+    leftCol.removeChild(leftCol.firstChild);
+    rightCol.removeChild(rightCol.firstChild);
+  }
+
   // Create a new ul
   const ulLeft = document.createElement('ul');
   const ulRight = document.createElement('ul');
@@ -97,12 +110,6 @@ const populateData = (e) => {
   // append ul to right col
   rightCol.appendChild(ulRight);
 }
-
-// References
-
-// https://zellwk.com/blog/looping-through-js-objects/
-// https://www.vitoshacademy.com/javascript-create-ul-and-li-elements-with-js-with-chained-function/
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
 
 // Event Listeners
 breedBtn.addEventListener('click', getRequest);

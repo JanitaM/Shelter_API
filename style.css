@@ -85,7 +85,7 @@ ul { list-style: none; }
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 450px;
+  height: 350px;
   width: 100%;
   overflow: hidden;
 }
@@ -139,7 +139,7 @@ ul { list-style: none; }
   justify-content: space-between;
   align-items: center;
   margin: 20px;
-}
+} 
 
 #display-container #card-group #card-img { 
   width: 100%; 
@@ -152,6 +152,7 @@ ul { list-style: none; }
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  height: 250px;
 }
 
 #display-container #card-group #card-info #card-left-col,

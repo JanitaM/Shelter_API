@@ -7,10 +7,7 @@
 
 #main-nav .container ul li { margin-bottom: 10px; }
 
-#hero-img-container {
-  flex-direction: column;
-  height: 350px;
-}
+#hero-img-container { flex-direction: column; }
 
 #hero-img-container .shelter { display: none; }
 
