@@ -1,31 +1,28 @@
+/* General */
 .container {
   flex-direction: column;
   justify-content: center;
 }
 
+/* Navbar */
 #main-nav .container h2 { margin-top: 10px; }
 
 #main-nav .container ul li { margin-bottom: 10px; }
 
+/* Hero Image Section */
 #hero-img-container { flex-direction: column; }
 
 #hero-img-container .shelter { display: none; }
 
 #hero-img-container .rescue { width: 100%; }
 
+/* Search Section */
 #search-container .container { max-width: 400px; }
 
+/* Display Section */
 #display-container { border: none; }
 
-#display-container #card-group {
+#display-container .card-group {
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  justify-content: center;
+  grid-template-rows: repeat(2, 1fr); 
 }
-
-#display-container #card-group #card-img { 
-  height: 100%; 
-  width: 50%;
-  margin: 0 auto;
-}
-
